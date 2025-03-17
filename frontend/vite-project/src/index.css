@@ -1,68 +1,44 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/**********************************************
+*************CUSTOM BREAKPOINTS**************
+* xxs --> very small mobile --> range: 0px to 319px --> range in rem: 0 to 20rem
+* xs --> very small mobile --> range: 320px to 427px --> range in rem: 20rem to 26rem
+* sm --> very small mobile --> range: 428px to 767px --> range in rem: 26rem to 48rem
+* md --> very small mobile --> range: 768px to 1023px --> range in rem: 48rem to 64rem
+* lg --> very small mobile --> range: 1024px to 1439px --> range in rem: 64rem to 90rem
+* xl --> very small mobile --> range: 1440px to 1599px --> range in rem: 90rem to 100rem
+* 2xl --> very small mobile --> range: 1600px to 1919px --> range in rem: 100rem to 120rem
+* 3xl --> very small mobile --> range: 1920px to Any Resolution --> range in rem: 120rem to
+*/
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xxs: 0px;
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 428px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 1600px;
+  --breakpoint-3xl: 1920px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+/******************************************Login Page Styles**********************************************************/
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.parent-container {
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(66, 1, 123, 0.8) 100%
+    ),
+    linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(66, 1, 123, 0.8) 100%
+    ),
+    url("../public/assets/fswd_logo.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
